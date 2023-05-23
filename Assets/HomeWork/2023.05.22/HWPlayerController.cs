@@ -8,13 +8,14 @@ public class HWPlayerController : MonoBehaviour
 {
     private Rigidbody2D rigidBody;
     private Vector2 inputDir;
-    private new SpriteRenderer render;
+    private SpriteRenderer render;
     [SerializeField] private float movePower;
     [SerializeField] private float maxSpeed;
 
     private void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+        render = GetComponent<SpriteRenderer>();
     }
     private void Update()
     {
